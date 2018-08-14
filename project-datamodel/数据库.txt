@@ -1,0 +1,15 @@
+create tablespace yycg
+logging
+datafile 'C:\oracle\product\10.2.0\oradata\yycg\yycg.dbf'
+size 32m
+autoextend on
+next 32m maxsize 2048m
+extent management local;
+
+
+create user p2p identified by p2p1234
+default tablespace yycg 
+temporary tablespace temp;  
+
+
+grant connect,resource,dba to p2p;
